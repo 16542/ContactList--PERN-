@@ -56,7 +56,7 @@ export default function BasicTable() {
 
   const RemoveItem = async (index, id) => {
     console.log(id);
-    const { data } = await axios.delete("http://localhost:5000/delete-user", {
+    const { data } = await axios.delete(`${url}delete-user`, {
       id: id,
     });
     if (data) {
